@@ -11,41 +11,47 @@
 
 ### 🛠️ Technical Toolkit
 
-* **SQL & Relational Databases:** MySQL, CTEs, Window Functions (`DENSE_RANK`, `ROW_NUMBER`, Cumulative Sums), CASE Logic, Multi-table Aggregations[cite: 14, 15, 19]
-* **Python Data Analytics:** Python 3.10+, Pandas, NumPy, Exploratory Data Analysis (EDA), Descriptive Statistics, Data Hygiene & Imputation
-* **Quantitative & Heuristic Modeling:** Time-Series Ingestion, Wilder's RSI Smoothing, Multi-Tier EMAs, Valuation Depreciation Logic
-* **Visualization & Tools:** Matplotlib, Seaborn, Git, GitHub, Jupyter Notebook, Next.js, Vercel, REST & WebSocket APIs, SQLite
+* **SQL & Relational Databases:** MySQL, CTEs, Window Functions (`DENSE_RANK`, `ROW_NUMBER`, Cumulative Sums), CASE Expressions, Multi-Table Joins & Grouping
+* **Python Data Analytics:** Python, Pandas, NumPy, Exploratory Data Analysis (EDA), Descriptive Statistics, Outlier Detection, Data Normalization
+* **Data Visualization & Reporting:** Matplotlib, Seaborn, Multi-Variable Subplots, Distribution Modeling (KDE, Histograms)
+* **Quantitative & Heuristic Modeling:** Time-Series Processing, 14-Period Wilder's RSI, Multi-Tier Moving Averages (21/50/200 EMA), Mark-to-Cutoff Buffers, Multi-Factor Depreciation Curves
+* **Tools, Frameworks & Cloud:** Git, GitHub, Jupyter Notebook, Google Colab, Next.js, React, Tailwind CSS, Vercel, REST & WebSocket APIs, SQLite
 
 ---
 
-### 📂 Featured Analytics Projects & Systems
+### 📂 Featured Projects & Systems
 
 #### 1. [E-Commerce Listing & Pricing Analytics (MySQL)](https://github.com/shabie77/ecommerce-pricing-analytics-sql)
-* Queried **5,436 multi-merchant listing records** totaling **$2.68M in gross listed inventory** across 12 targeted business queries using CTEs and window functions[cite: 2, 7, 19].
-* Quantified vendor duopoly concentration, discovering that the top 2 merchants commanded **51.99% of total listed inventory value** ($1.39M)[cite: 14].
-* Identified high-ticket revenue skew, showing products priced at **$1,000+** accounted for only **13.7%** of listings but drove **59.5% ($1.59M)** of total platform value[cite: 7, 18].
-* Evaluated fulfillment strategies, proving that free delivery terms dominate **71.8% of platform listings** and represent over $1.85M in catalog value[cite: 17].
+* Audited and analyzed **5,436 multi-merchant listing records ($2.68M gross inventory value)** using multi-tier SQL queries, CTEs, and window functions.
+* Discovered vendor volume duopoly where the top 2 merchants (**Bestbuy.com** at 31.87% and **bhphotovideo.com** at 20.12%) command **51.99% ($1.39M)** of total catalog value.
+* Identified extreme revenue concentration with high-ticket products ($1,000+) generating **59.5% ($1.59M)** of total gross value from just 13.7% of listings.
+* Evaluated fulfillment strategies, revealing that **>71.8% of all listings** offer free or conditional expedited shipping to convert high-margin inventory.
 
-#### 2. [E-Commerce Sales & Margin Analysis (Python EDA)](https://github.com/shabie77/ecommerce-sales-discount-analysis)
-* Conducted comprehensive exploratory analysis across a cleaned **50,000-order transactional dataset ($20.06M GMV)** spanning 62 operational fields.
-* Evaluated promotional elasticity, revealing identical **~70% discount incidence** across Regular, Premium, and VIP customer segments at an identical ~8.5% average markdown.
-* Audited category unit economics, demonstrating that gross margins remained flat at **~37%** across all five categories, with absolute profit driven strictly by base product ticket size rather than margin expansion.
-* Disproved the logistics-satisfaction hypothesis, establishing that customer ratings remained flat at **~3.0 stars** regardless of delivery transit duration (1 to 14 days) across 37,604 completed deliveries.
+#### 2. [E-Commerce Sales & Discount Analysis (Python / EDA)](https://github.com/shabie77/ecommerce-sales-discount-analysis)
+* Conducted an end-to-end exploratory analysis of **50,000 transaction records ($20.06M GMV)** across 62 standardized operational fields using Pandas, NumPy, and Seaborn.
+* Identified flat promotional incidence (~70% across Regular, Premium, and VIP customer segments at ~8.5% average markdown), highlighting significant margin leakage on inelastic buyers.
+* Evaluated unit economics to demonstrate uniform ~37% profit margins across all categories, proving that cash contribution is driven purely by ticket size rather than category efficiency.
+* Tested fulfillment metrics across 37,600+ delivered orders to establish that transit speed (1 to 14 days) had no measurable correlation with customer ratings (averaging flat at ~3.0 stars).
 
 #### 3. [LBS Tool – B.Sc. Nursing Admission Analytics Platform](https://github.com/shabie77/lbs-tool) | [Live Application](https://lbs-tool.vercel.app/)
-* Ingested, standardized, and audited **12,195 historical allotment records** across Kerala's 2024–2025 admission cycles.
-* Engineered **1,426 distinct college-quota cutoff benchmarks** covering 180 government and private institutions across all 14 districts.
-* Formulated a deterministic mark-delta buffer model classifying applicant viability into *Safe*, *Possible*, and *Dream* tiers.
-* Integrated automated counselor dispatch routing candidate marks, quota categories, and top 5 matched institutions directly to advisory teams.
+* Ingested, standardized, and cleansed **12,195 raw student allotment records** across Kerala's 2024–2025 admission cycles into **1,426 college-quota cutoff baselines** covering 180 institutions.
+* Designed a deterministic Mark-Delta algorithm classifying applicant admission chances into *Safe*, *Possible*, or *Dream* tiers based on historical closing rank buffers.
+* Engineered an automated 5-choice preference list builder and an integrated lead dispatch pipeline connecting qualified applicants directly with academic counselors.
 
 #### 4. [Devicelytics – Secondary Market Device Valuation Engine](https://github.com/shabie77/devicelytics) | [Live Application](https://devicelytics.vercel.app/)
-* Architected a consumer electronics valuation engine to resolve secondary smartphone and laptop price asymmetry.
-* Implemented multi-factor deterministic depreciation models accounting for release age decay, battery charge cycles, display integrity, chassis condition, and component defect penalties.
-* Delivered realistic transaction corridors (Buyer Max / Seller Min) via a responsive, mobile-first Next.js web application deployed on Vercel.
+* Engineered a deterministic consumer electronics valuation engine to eliminate price asymmetry in pre-owned smartphone and laptop secondary markets.
+* Implemented multi-factor depreciation algorithms calculating real residual value based on lifecycle age decay, battery charge cycles, display integrity, and functional defect penalties.
+* Built and deployed a mobile-first responsive web interface using Next.js, TypeScript, and Tailwind CSS hosted on Vercel.
 
-#### 5. [Crypton Intel – Quantitative Market Intelligence Engine](https://github.com/shabie77/crypton-intel) | [Live Telegram Bot](https://t.me/Alert71_bot)
-* Constructed an asynchronous data pipeline streaming real-time Binance Spot OHLCV candles, volume spikes, and futures liquidation events via WebSockets.
-* Implemented a 7-factor confluence model combining 14-period Wilder’s RSI, multi-tier EMAs (21/50/200), and swing Break of Structure (BOS) logic.
-* Automated scheduled 4-hour market digests and real-time breakout alerts dispatched directly to a dedicated Telegram interface.
+#### 5. [Crypton Intel – Quantitative Market Intelligence Engine](https://github.com/shabie77/crypton-intel) | [Telegram Channel](https://t.me/Alert71_bot)
+* Constructed an asynchronous data ingestion pipeline streaming continuous Binance Spot OHLCV candlestick data and derivatives liquidation events via WebSockets.
+* Implemented a 7-factor quantitative confluence model combining 14-period Wilder’s RSI, multi-tier EMAs (21/50/200), and Break of Structure (BOS) volatility dynamics.
+* Automated low-latency 4-hour market structure digests and real-time volume breakout notifications delivered 24/7 via a dedicated Telegram bot worker.
 
 ---
+
+### 📈 GitHub Analytics
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=shabie77&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="Mohammed Shabil's GitHub Stats" />
+</p>
