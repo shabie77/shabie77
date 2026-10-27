@@ -3,8 +3,8 @@
 **Data Analyst** with a background in **Finance & Taxation** and operational experience in **air cargo logistics**, specializing in relational database analytics (MySQL), exploratory data analysis (Python), quantitative pipelines, and analytical decision-support tools.
 
 📍 **Location:** Kerala, India  
-💼 **Portfolio:** (https://shabie77.github.io)  
-🔗 **LinkedIn:** (https://linkedin.com/in/mohammedshabil)  
+💼 **Portfolio:** [shabie77.github.io](https://shabie77.github.io)  
+🔗 **LinkedIn:** [linkedin.com/in/mohammedshabil](https://linkedin.com/in/mohammedshabil)  
 📧 **Email:** [mohdshabil.e@gmail.com](mailto:mohdshabil.e@gmail.com)
 
 ---
@@ -49,9 +49,3 @@
 * Automated low-latency 4-hour market structure digests and real-time volume breakout notifications delivered 24/7 via a dedicated Telegram bot worker.
 
 ---
-
-### 📈 GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=shabie77&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="Mohammed Shabil's GitHub Stats" />
-</p>
